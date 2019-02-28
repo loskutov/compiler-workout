@@ -27,7 +27,7 @@ type state = string -> int
 (* Empty state: maps every variable into nothing. *)
 let empty = fun x -> failwith (Printf.sprintf "Undefined variable %s" x)
 
-(* Update: non-destructively "modifies" the state s by binding the variable x 
+(* Update: non-destructively "modifies" the state s by binding the variable x
    to value v and returns the new state.
 *)
 let update x v s = fun y -> if x = y then v else s y
